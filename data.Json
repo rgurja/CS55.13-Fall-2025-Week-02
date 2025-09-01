@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Southwest Airlines",
+        "link":"https://www.southwest.com/"
+    },
+    {
+        "name":"American Airlines",
+        "link":"https://www.aa.com"
+    },
+    {
+        "name":"United Airlines",
+        "link":"https://www.united.com/en/us"
+    },
+    {
+        "name":"Delta Airlines",
+        "link":"https://www.delta.com/"
+    },
+    {
+        "name":"Spirit Airlines",
+        "link":"https://www.spirit.com/"
+    },
+    {
+        "name":"Frontier Airlines",
+        "link":"https://www.flyfrontier.com/"
+    },
+    {
+        "name":"Turkish Airlines",
+        "link":"https://www.turkishairlines.com/"
+    },
+    {
+        "name":"Avelo Airlines",
+        "link":"https://www.aveloair.com/"
+    },
+    {
+        "name":"Emirates Airlines",
+        "link":"https://www.emirates.com/us/english/"
+    },
+    {
+        "name":"Alaska Airlines",
+        "link":"https://www.alaskaair.com/"
+    }
+]

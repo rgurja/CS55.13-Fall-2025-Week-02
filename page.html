@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CS55.13 Fall 2025 Week 2</title>
+        <!-- load react and react-dom from CDN -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <!-- load babel to convert jsx to js -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h2>Which is your favorite airline </h2>
+        <div id="myApp"></div>
+        <!-- load our custom script with react component -->
+        <script data-type="module" data-presets="react" type="text/babel">
+            "use strict";
+
+            // load react from CDN
+            import React from 'https://cdn.jsdelivr.net/npm/react@19.1.1/+esm';
+            // load createRoot method from ReactDOM/client
+            import { createRoot } from 'https://cdn.jsdelivr.net/npm/react-dom@19.1.1/client/+esm';
+
+            // create a react component
+            function ProjectList(props) {
+                // return some jsx
+                return  <div>
+                            <ul>                            {
+                                props.list.map(
+                                    (item,index) => (
+                                        <li key={index}>
+                                            <a href={item.link}>
+                                                {item.name}
+                                            </a>
+                                        </li>
+                                    )
+                                )
+                            }
+                            </ul>
+                        </div>;
+            }
+            
+            // use jquery to load external JSON file
+            $.getJSON(
+                "x",
+                function(jsonFromJquery) {
+                    // after JSON loaded
+                    console.log(jsonFromJquery);
+                    // get existing HTML element to put react app into
+                    const myElement = document.getElementById('myApp');
+                    // create a react root using that element
+                    const myRoot = createRoot(myElement);
+                    // then call react render() to output component into existing element
+                    myRoot.render(
+                        <ProjectList list={jsonFromJquery} />
+                    );
+                }
+            );
+        </script>
+    </body>
+</html>
